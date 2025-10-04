@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваше Имя — Android Developer</title>
+    <style>
+        /* Шрифты и общие стили */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #1E1E1E; /* Темный фон, как в IDE */
+            --text-color: #D4D4D4; /* Светлый текст */
+            --accent-green: #A4C639; /* Android Green */
+            --keyword-color: #C586C0; /* Фиолетовый для ключевых слов (Kotlin/Java) */
+            --string-color: #CE9178; /* Оранжевый для строк (Имя, Цель) */
+            --comment-color: #6A9955; /* Зеленый для комментариев */
+            --prompt-color: #569CD6; /* Синий для командной строки/переменных */
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            line-height: 1.6;
+        }
+
+        /* Общие стили для выделения */
+        .kotlin-keyword { color: var(--keyword-color); }
+        .string-literal { color: var(--string-color); }
+        .function-name { color: var(--prompt-color); font-weight: bold; }
+        .comment { color: var(--comment-color); display: block; margin-bottom: 5px; }
+        .prompt { color: var(--accent-green); margin-right: 10px; }
+        .block-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 5px;
+        }
+
+        /* Стиль для главного имени/представления */
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .intro-line {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* Ссылки */
+        a {
+            color: var(--prompt-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-green);
+            text-decoration: underline;
+        }
+
+        .social-link {
+            margin-right: 15px;
+            white-space: nowrap;
+        }
+
+        /* Блок с проектами и навыками */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+        /* Имитация точки/буллита в стиле Android/Gradle */
+        .skills-list li::before {
+            content: "•"; /* Или можно использовать 'G' для Gradle */
+            color: var(--accent-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="intro-line">
+            <span class="kotlin-keyword">val</span>
+            <span class="function-name">name</span>
+            <span class="prompt">=</span>
+            <span class="string-literal">"Ваше Имя"</span>
+        </div>
+
+        <div class="intro-line">
+            <span class="kotlin-keyword">val</span>
+            <span class="function-name">age</span>
+            <span class="prompt">=</span>
+            <span class="string-literal">"23 года"</span>
+        </div>
+
+        <div class="block-title">
+            <span class="prompt">&gt;</span>
+            <span class="function-name">Android Developer</span>
+            <span class="kotlin-keyword">in</span>
+            <span class="string-literal">Munich/Online</span>
+        </div>
+        
+        <p class="comment">// Приветствие и личная миссия, стилизованная под комментарий</p>
+        <p>
+            Моя главная <span class="kotlin-keyword">цель</span> — изучить <span class="function-name">Kotlin</span> и
+            <span class="function-name">Jetpack Compose</span>, чтобы создавать чистые,
+            высокопроизводительные Android-приложения. Я ориентирован на
+            <span class="function-name">Clean Architecture</span> и <span class="function-name">Material Design</span>.
+        </p>
+
+        <div class="block-title">
+            <span class="prompt">$ cat current_focus.txt</span>
+        </div>
+        <p>
+            Сейчас я активно работаю над своим первым крупным учебным
+            <span class="kotlin-keyword">проектом</span> — приложением-трекером
+            <span class="string-literal">"Mindful Tracker App"</span>. Изучаю
+            <span class="function-name">Room Database</span> и <span class="function-name">Coroutines</span>.
+        </p>
+
+        <div class="block-title">
+            <span class="prompt">$ ls -l tech_stack/</span>
+        </div>
+        <ul class="skills-list">
+            <li><span class="kotlin-keyword">Languages:</span> Kotlin (основной), Java</li>
+            <li><span class="kotlin-keyword">Frameworks/Libs:</span> Jetpack Compose, Android SDK, Retrofit, Koin/Hilt</li>
+            <li><span class="kotlin-keyword">Tools:</span> Android Studio, Gradle, Git, Figma</li>
+            <li><span class="kotlin-keyword">Concepts:</span> MVVM, REST APIs, Design Patterns</li>
+        </ul>
+
+        <div class="block-title">
+            <span class="prompt">val</span>
+            <span class="function-name">connect_with_me</span>
+            <span class="prompt">=</span>
+            <span class="kotlin-keyword">fun</span>()
+        </div>
+
+        <p>
+            <a href="https://github.com/ВАШ_НИКНЕЙМ" target="_blank" class="social-link">GitHub</a>
+            <a href="https://linkedin.com/in/ВАШ_ПРОФИЛЬ" target="_blank" class="social-link">LinkedIn</a>
+            <a href="mailto:ВАША_ПОЧТА" class="social-link">Email</a>
+            <a href="https://t.me/ВАШ_НИКНЕЙМ" target="_blank" class="social-link">Telegram</a>
+        </p>
+
+        <p class="comment" style="margin-top: 20px;">// Let's build something great together.</p>
+
+    </div>
+</body>
+</html>
